@@ -29,7 +29,7 @@
     <div class="container">
       <section id="main_content">
         <h1>
-<a name="metainfo-v0214" class="anchor" href="#metainfo-v0214"><span class="octicon octicon-link"></span></a>MetaInfo (v0.2.14)</h1>
+<a name="metainfo-v0215" class="anchor" href="#metainfo-v0215"><span class="octicon octicon-link"></span></a>MetaInfo (v0.2.15)</h1>
 
 <p>This project was renamed from "<a href="https://github.com/LouisT/VidInfo" title="Title">VidInfo</a>".</p>
 
@@ -120,8 +120,16 @@ However, if you make something interesting, I would like to check it out.</p>
 <h2>
 <a name="misc-apis" class="anchor" href="#misc-apis"><span class="octicon octicon-link"></span></a>Misc APIs:</h2>
 
-<p><a href="http://ifixit.com/" title="Title">ifixit.com</a>
-   <a href="http://slideshare.net" title="Title">slideshare.net</a></p>
+<p><a href="http://gist.github.com/" title="Title">gist.github.com (1)</a>
+   <a href="http://github.com/" title="Title">github.com (1)</a>
+   <a href="http://ifixit.com/" title="Title">ifixit.com</a>
+   <a href="http://npmjs.org/" title="Title">npmjs.org</a>
+   <a href="http://slideshare.net" title="Title">slideshare.net</a>
+   <a href="http://travis-ci.org/" title="Title">travis-ci.org (2)</a></p>
+
+<pre><code>1) Need to add API key support.
+2) More information available. See "More Information" below.
+</code></pre>
 
 <h2>
 <a name="embedly-api" class="anchor" href="#embedly-api"><span class="octicon octicon-link"></span></a><a href="http://embed.ly/" title="Title">Embed.ly</a> API:</h2>
@@ -165,6 +173,10 @@ API key required, signup here: https://app.embed.ly/signup/
 (trakt.tv)
     This API is massive and can return a lot of information. I need to rewrite parts of MetaInfo to support this.
     For now, extended summary for Movies and TV shows are supported.
+(travis-ci.org)
+    There are many metadata methods this API supports, right now I've only done builds and jobs. I'm not at all sure
+    when or if I'll ever add support for any of the other methods.
+    When using a shortcut, the ID must be passed as "builds/&lt;number&gt;" or "jobs/&lt;number&gt;". (Examples: builds/18234463, jobs/18234467)
 </code></pre>
 
 <h2>
@@ -227,6 +239,8 @@ Facebook.com:               fbook, fbvideo, facebook, facebookcom
 Flickr.com:                 flickr, flickrcom
 Funnyordie.com:             ford, funnyor, funnyordie, funnyordiecom
 GiantBomb.com:              gbomb, giantbomb, giantbombcom
+Gist.github.com:            gist, gistgithub, gistgithubcom
+Github.com:                 git, github, githubcom
 Hulu.com:                   hulu, hulucom
 iFixit.com:                 ifixit, ifixitcom
 IMDB.com:                   imdb, imdbcom
@@ -242,6 +256,7 @@ Mixcloud.com:               mixc, mixcloud, mixcloudcom
 Movieclips.com*:            mclips, movieclips, movieclipscom
 Muzu.tv*:                   muzu, muzutv
 Nfb.ca:                     nfb, nfbca
+Npmjs.org:                  npm, npmjs, npmjsorg
 Official.fm:                ofm, official, officialfm
 on.aol.com:                 onaol, onaolcom
 Qik.com:                    qik, qikcom
@@ -258,6 +273,7 @@ Theonion.com:               onion, theonion, theonioncom
 Traileraddict.com*:         tadd, taddict, traileraddict, traileraddictcom
 Trailers.apple.com:         tapple, trailersapple, trailersapplecom
 Trakt.tv (show/movie):      trakt, trakttv
+Travis-ci.org:              travis, travisci, travisciorg
 Twitch.tv (stream):         ttvs, tstream, twitchtvstream
 Twitch.tv (video clip):     ttvc, tclip, twitchtvclip
 Ustream.tv (stream):        utvs, ustream, ustreamtvstream
