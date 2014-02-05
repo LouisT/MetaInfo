@@ -92,7 +92,7 @@
                     foropts['basicauth'] = opts['basicauth'];
                  };
               };
-              this.doRequest(this.stringFormat(apidat["url"],foropts),apidat,cb,opts);
+              this.doRequest(this.stringFormat(apidat["url"],foropts,apidat),apidat,cb,opts);
             } else {
               cb({error:true,message:'No such API!'},true);
            };
@@ -151,7 +151,7 @@
                             foropts['basicauth'] = opts['basicauth'];
                          };
                       };
-                      apidat['url'] = this.stringFormat(apidat["url"],foropts);
+                      apidat['url'] = this.stringFormat(apidat["url"],foropts,apidat);
                       apidat['api'] = api;
                       apidat['id']  = (this.getType(id)=="String"?id.trim():id);
                       break apiloop;
@@ -213,7 +213,7 @@
    MetaInfo.prototype.doRequest = function (url,apidat,cb,opts) {
            // Default to JSON for requests. Custom user agent, accept everything!
            var getopts = {type:'json',headers:{'User-Agent':this.userAgent,'Accept':'*/*'}};
-           // Support for JSON, CVS and INI. Maybe XML at some point.
+           // Support for JSON, CVS, INI and XML.
            if (apidat['type']) {
               getopts['type'] = apidat['type'];
            };
@@ -253,13 +253,14 @@
    };
 
    // Format strings.
-   MetaInfo.prototype.stringFormat = function (str,opts) {
+   MetaInfo.prototype.stringFormat = function (str,opts,apidat) {
            // Allow a function to be passed to generate the URL.
            if (this.getType(str) == "Function") {
-              str = str.call(this,opts);
+              str = str.call(this,opts,apidat);
            };
            return str.replace(/{(\\?:)([^}]+)}/g,function(m,o,k) {
-                  return (opts[k]?encodeURIComponent(opts[k]):m);
+                  // Add "noencode" to API options, encoding everything breaks some things like GitHub.
+                  return (opts[k]?((!('noencode' in apidat)||!apidat.noencode)?encodeURIComponent(opts[k]):opts[k]):m);
            });
    };
 
@@ -440,7 +441,7 @@
                    var spc = new Array(16).join(' ');
                    var obj = {REGEX:regex.join(',\n'+spc),SHORTCUTS:'\''+shortcuts.join('\',\n'+spc+'\'')+'\'',SERVICEURL:servurl},
                        location = __dirname+'/apis/embedly.js';
-                       data = MetaInfo.prototype.stringFormat(temp,obj);
+                       data = MetaInfo.prototype.stringFormat(temp,obj,{});
                    fs.writeFile(location,data,function (err) {
                       if (!err) {
                          cb({message:'File saved to '+location,location:location,success:true});

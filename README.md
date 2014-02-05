@@ -1,4 +1,4 @@
-MetaInfo (v0.2.14)
+MetaInfo (v0.2.15)
 ======
 
 This project was renamed from "[VidInfo](https://github.com/LouisT/VidInfo "Title")".
@@ -85,8 +85,14 @@ Image APIs:
 
 Misc APIs:
 ------
+   [gist.github.com (1)](http://gist.github.com/ "Title")
+   [github.com (1)](http://github.com/ "Title")
    [ifixit.com](http://ifixit.com/ "Title")
    [slideshare.net](http://slideshare.net "Title")
+   [travis-ci.org (2)](http://travis-ci.org/ "Title")
+
+    1) Need to add API key support.
+    2) More information available. See "More Information" below.
 
 [Embed.ly](http://embed.ly/ "Title") API:
 ------
@@ -125,6 +131,10 @@ More Information:
     (trakt.tv)
         This API is massive and can return a lot of information. I need to rewrite parts of MetaInfo to support this.
         For now, extended summary for Movies and TV shows are supported.
+    (travis-ci.org)
+        There are many metadata methods this API supports, right now I've only done builds and jobs. I'm not at all sure
+        when or if I'll ever add support for any of the other methods.
+        When using a shortcut, the ID must be passed as "builds/<number>" or "jobs/<number>". (Examples: builds/18234463, jobs/18234467)
 
 TODO:
 ------
@@ -178,6 +188,8 @@ Shortcuts:
     Flickr.com:                 flickr, flickrcom
     Funnyordie.com:             ford, funnyor, funnyordie, funnyordiecom
     GiantBomb.com:              gbomb, giantbomb, giantbombcom
+    Gist.github.com:            gist, gistgithub, gistgithubcom
+    Github.com:                 git, github, githubcom
     Hulu.com:                   hulu, hulucom
     iFixit.com:                 ifixit, ifixitcom
     IMDB.com:                   imdb, imdbcom
@@ -209,6 +221,7 @@ Shortcuts:
     Traileraddict.com*:         tadd, taddict, traileraddict, traileraddictcom
     Trailers.apple.com:         tapple, trailersapple, trailersapplecom
     Trakt.tv (show/movie):      trakt, trakttv
+    Travis-ci.org:              travis, travisci, travisciorg
     Twitch.tv (stream):         ttvs, tstream, twitchtvstream
     Twitch.tv (video clip):     ttvc, tclip, twitchtvclip
     Ustream.tv (stream):        utvs, ustream, ustreamtvstream
