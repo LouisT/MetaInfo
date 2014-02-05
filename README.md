@@ -88,6 +88,7 @@ Misc APIs:
    [gist.github.com (1)](http://gist.github.com/ "Title")
    [github.com (1)](http://github.com/ "Title")
    [ifixit.com](http://ifixit.com/ "Title")
+   [npmjs.org](http://npmjs.org/ "Title")
    [slideshare.net](http://slideshare.net "Title")
    [travis-ci.org (2)](http://travis-ci.org/ "Title")
 
@@ -205,6 +206,7 @@ Shortcuts:
     Movieclips.com*:            mclips, movieclips, movieclipscom
     Muzu.tv*:                   muzu, muzutv
     Nfb.ca:                     nfb, nfbca
+    Npmjs.org:                  npm, npmjs, npmjsorg
     Official.fm:                ofm, official, officialfm
     on.aol.com:                 onaol, onaolcom
     Qik.com:                    qik, qikcom
