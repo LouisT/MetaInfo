@@ -10,7 +10,6 @@ In other words, I don't care what you do with it.
 However, if you make something interesting, I would like to check it out.
 
 [![Build Status](https://travis-ci.org/LouisT/MetaInfo.png?branch=master)](https://travis-ci.org/LouisT/MetaInfo)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/LouisT/metainfo/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Video APIs:
 ------
